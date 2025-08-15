@@ -1,0 +1,104 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f4f6f9;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 700px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(154, 77, 85, 0.3);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #555;
+  font-weight: bold;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgb(110, 109, 109);
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Focus states pour les champs */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus {
+  outline: none;
+  border-color: #9a4d55;
+  box-shadow: 0 0 0 2px rgba(154, 77, 85, 0.2);
+}
+
+/* Styles pour les boutons */
+.btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.btn-add {
+  background-color: #9a4d55;
+  color: white;
+}
+
+.btn-add:hover {
+  background-color: #7e3e44;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #545b62;
+}
+
+/* Conteneur pour les boutons empilés */
+.button-container {
+  margin-top: 20px;
+}
+
+/* Responsive pour petits écrans */
+@media (max-width: 768px) {
+  .container {
+    margin: 20px;
+    padding: 20px;
+  }
+}

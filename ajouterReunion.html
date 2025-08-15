@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Ajouter une Réunion</title>
+  <link rel="stylesheet" href="ajouter_reunion.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Ajouter une Réunion</h1>
+    <form>
+      <div class="form-group">
+        <label for="titre">Titre de la réunion</label>
+        <input type="text" id="titre" name="titre" placeholder="Entrez le titre de la réunion">
+      </div>
+
+      <div class="form-group">
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date">
+      </div>
+
+      <div class="form-group">
+        <label for="heure">Heure</label>
+        <input type="time" id="heure" name="heure">
+      </div>
+
+      <div class="form-group">
+        <label for="lieu">Lieu</label>
+        <input type="text" id="lieu" name="lieu" placeholder="Ex: Salle A - Bâtiment 2">
+      </div>
+
+      <div class="form-group">
+        <label for="participants">Participants</label>
+        <textarea id="participants" name="participants" placeholder="Liste ou description des participants..."></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="ordre">Ordre du jour</label>
+        <textarea id="ordre" name="ordre" placeholder="Décrire les points à aborder..."></textarea>
+      </div>
+
+      <button type="submit">Ajouter la réunion</button>
+    </form>
+  </div>
+</body>
+</html>

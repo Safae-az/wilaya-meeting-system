@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscription Participant</title>
+    <link rel="stylesheet" href="login.css"> 
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="header">
+                <header><img src="Logo_Wilaya.jpg" alt=""></header>
+                <p>Inscription Participant</p>
+            </div>
+
+            <form action="partconnect.php" method="post">
+                <div class="input-box">
+                    <label for="nom">Nom complet</label>
+                    <input type="text" class="input-field" id="nom" name="nom" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="email">E-Mail</label>
+                    <input type="email" class="input-field" id="email" name="email" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" class="input-field" id="password" name="password" required>
+                </div>
+
+                <div class="input-box">
+                    <input type="submit" class="input-submit" value="S'inscrire">
+                </div>
+            </form>
+
+            <div class="bottom">
+                <span><a href="partconnect.php">Déjà inscrit ? Se connecter</a></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

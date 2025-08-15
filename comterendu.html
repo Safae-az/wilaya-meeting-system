@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Compte Rendu Réunions</title>
+  <link rel="stylesheet" href="compte_rendu.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Gestion des Comptes Rendus</h1>
+
+    <div class="upload-section">
+      <h2>Téléverser un nouveau compte rendu</h2>
+      <form action="#" method="post" enctype="multipart/form-data">
+        <label for="titre">Titre :</label>
+        <input type="text" id="titre" name="titre" placeholder="Ex: Réunion du 02/07/2025" required>
+
+        <label for="fichier">Fichier (PDF, DOC, etc.) :</label>
+        <input type="file" id="fichier" name="fichier" accept=".pdf,.doc,.docx" required>
+
+        <button type="submit">Téléverser</button>
+      </form>
+    </div>
+
+    <div class="liste-section">
+      <h2>Comptes rendus précédents</h2>
+      <ul class="liste-fichiers">
+        <li><a href="#">📄 Réunion du 01/06/2025 - Budget.pdf</a></li>
+        <li><a href="#">📄 Réunion du 10/05/2025 - Projet X.docx</a></li>
+        <li><a href="#">📄 Réunion du 15/04/2025 - Objectifs.doc</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

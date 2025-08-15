@@ -1,0 +1,337 @@
+:root {
+    --main-color: #9a4d55;
+    --light-color: #fceced;
+    --hover-color: #a8444c;
+    --font-family: 'Inter', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: var(--main-color);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+form {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+form input, form select, form button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+form button {
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background-color: var(--hover-color);
+}
+
+.reunion-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 15px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.btn-compte-rendu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 14px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.btn-compte-rendu:hover {
+    background-color: var(--hover-color);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 12px;
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { transform: translateY(0); opacity: 1; }
+    to { transform: translateY(-30px); opacity: 0; }
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
+}
+
+.file-info {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.file-icon {
+    font-size: 22px;
+    color: var(--main-color);
+}
+
+.delete-cr {
+    background-color: #9a4d55;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.delete-cr:hover {
+    background-color: #9a4d55;
+}
+
+.error {
+    background-color: #ffe2e2;
+    color: #9a4d55;
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+    margin: 10px auto;
+    max-width: 600px;
+}
+
+a {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+:root {
+    --main-color: #9a4d55;
+    --light-color: #fceced;
+    --hover-color: #9a4d55;
+    --font-family: 'Inter', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: var(--main-color);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+form {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+form input, form select, form button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+form button {
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background-color: var(--hover-color);
+}
+
+.reunion-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 15px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.btn-compte-rendu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 14px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.btn-compte-rendu:hover {
+    background-color: var(--hover-color);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 12px;
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { transform: translateY(0); opacity: 1; }
+    to { transform: translateY(-30px); opacity: 0; }
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
+}
+
+.file-info {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.file-icon {
+    font-size: 22px;
+    color: var(--main-color);
+}
+
+.delete-cr {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.delete-cr:hover {
+    background-color: #9a4d55;
+}
+
+.error {
+    background-color: #ffe2e2;
+    color: #9a4d55;
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+    margin: 10px auto;
+    max-width: 600px;
+}
+
+a {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+

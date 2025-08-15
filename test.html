@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestion des utilisateurs</title>
+  <link rel="stylesheet" href="utilisateurs.css">
+  <link rel="stylesheet" href="dashboardstyle.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+  <style>
+    body {
+      background-image: url('wilayaOujda.PNG');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+    }
+
+    .user-content {
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(5px);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <nav>
+      <ul style="list-style-type:none;">
+        <li><a href="#" class="logo">
+          <img src="Logo_Wilaya.jpg" alt="Logo">
+          <span class="nav-item"><?= htmlspecialchars($texteRole) ?></span>
+        </a></li>
+        <li><a href="dashboard.php">
+          <i class="fas fa-tachometer-alt"></i>
+          <span class="nav-item"><b>Tableau de bord</b></span>
+        </a></li>
+        <li><a href="utilisateurs.php">
+          <i class="fas fa-user-plus"></i>
+          <span class="nav-item"><b>Ajouter Utilisateur</b></span>
+        </a></li>
+        <li><a href="user.php" class="active">
+          <i class="fas fa-users"></i>
+          <span class="nav-item"><b>Utilisateurs</b></span>
+        </a></li>
+        <li><a href="ajouter_reunion.php">
+          <i class="fas fa-calendar-plus"></i>
+          <span class="nav-item"><b>Nouvelle Réunion</b></span>
+        </a></li>
+        <li><a href="reunions.php">
+          <i class="fas fa-calendar-check"></i>
+          <span class="nav-item"><b>Réunions</b></span>
+        </a></li>
+        <li><a href="compte_rendu.php">
+          <i class="fas fa-file-alt"></i>
+          <span class="nav-item"><b>Compte Rendu</b></span>
+        </a></li>
+        <li><a href="logout.php" class="logout">
+          <i class="fas fa-sign-out-alt"></i>
+          <span class="nav-item"><b>Déconnexion</b></span>
+        </a></li>
+      </ul>
+    </nav>
+
+    <section class="main">
+      <div class="user-content">
+        <h1>Gestion des utilisateurs</h1>
+
+        <div class="actions">
+          <input type="text" placeholder="Rechercher un utilisateur..." class="search-input">
+          <a href="ajouter_utilisateur.php" class="btn btn-add">+ Ajouter un utilisateur</a>
+        </div>
+
+        <table class="user-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Nom</th>
+              <th>Email</th>
+              <th>Rôle</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
+            <tr>
+              <td><?= htmlspecialchars($row['id_user']) ?></td>
+              <td><?= htmlspecialchars($row['nom'] . ' ' . $row['prenom']) ?></td>
+              <td><?= htmlspecialchars($row['email']) ?></td>
+              <td><?= htmlspecialchars($row['role']) ?></td>
+              <td>
+                <a href="modifier_utilisateur.php?id=<?= $row['id_user'] ?>" class="btn btn-edit">Modifier</a>
+                <a href="supprimer_utilisateur.php?id=<?= $row['id_user'] ?>" class="btn btn-delete" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet utilisateur ?')">Supprimer</a>
+              </td>
+            </tr>
+            <?php endwhile; ?>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const searchInput = document.querySelector('.search-input');
+    const tableRows = document.querySelectorAll('.user-table tbody tr');
+
+    searchInput.addEventListener('input', function() {
+      const filter = this.value.toLowerCase();
+
+      tableRows.forEach(row => {
+        const nom = row.querySelector('td:nth-child(2)').textContent.toLowerCase();
+        if (nom.includes(filter)) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

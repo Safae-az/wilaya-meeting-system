@@ -1,0 +1,83 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f3f5f8;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.upload-section, .liste-section {
+  margin-bottom: 40px;
+}
+
+.upload-section h2, .liste-section h2 {
+  color: #9a4d55;
+  margin-bottom: 15px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin: 10px 0 5px;
+  color: #555;
+}
+
+form input[type="text"],
+form input[type="file"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+form button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #9a4d55;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background-color: #9a4d55;
+}
+
+.liste-fichiers {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.liste-fichiers li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.liste-fichiers a {
+  color: #555;
+  text-decoration: none;
+}
+
+.liste-fichiers a:hover {
+  color: #9a4d55;
+}

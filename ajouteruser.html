@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestion des utilisateurs</title>
+  <link rel="stylesheet" href="utilisateurs.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Gestion des utilisateurs</h1>
+
+    <div class="actions">
+      <input type="text" placeholder="Rechercher un utilisateur..." class="search-input">
+      <button class="btn btn-add">+ Ajouter un utilisateur</button>
+    </div>
+
+    <table class="user-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Nom</th>
+          <th>Email</th>
+          <th>Rôle</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Données d'exemple (à remplacer dynamiquement plus tard) -->
+        <tr>
+          <td>1</td>
+          <td>Anas fillali</td>
+          <td>anas@example.com</td>
+          <td>Admin</td>
+          <td>
+            <button class="btn btn-edit">Modifier</button>
+            <button class="btn btn-delete">Supprimer</button>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Ahmed Yassine</td>
+          <td>yassine@wilaya.ma</td>
+          <td>Responsable</td>
+          <td>
+            <button class="btn btn-edit">Modifier</button>
+            <button class="btn btn-delete">Supprimer</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
